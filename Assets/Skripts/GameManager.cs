@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("MakeRain", 0f, 1f);
+        InvokeRepeating("MakeMeteor", 0f, 1f);
         MakeMeteor();
     }
 
