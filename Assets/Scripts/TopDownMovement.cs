@@ -7,7 +7,7 @@ public class TopDownMovement : MonoBehaviour
     private Rigidbody2D movementRigidbody;
     private Vector2 movementDirection = Vector2.zero;
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    //private Animator animator;
 
     private void Awake()
     {
@@ -25,8 +25,8 @@ public class TopDownMovement : MonoBehaviour
     private void Move(Vector2 direction)
     {
         movementDirection = direction;
-        bool isMoving = direction.sqrMagnitude > 0;
-        animator.SetBool("isMoving", isMoving);
+        //bool isMoving = direction.sqrMagnitude > 0;
+        //animator.SetBool("isMoving", isMoving);
     }
 
     private void FixedUpdate()
