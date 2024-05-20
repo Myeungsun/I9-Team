@@ -30,7 +30,6 @@ public class TopDownMovement : MonoBehaviour
         if (animator != null)
         {
             bool isMoving = direction.sqrMagnitude > 0;
-            Debug.Log("qwe");
 
             animator.SetBool("isMove", isMoving);
         }
