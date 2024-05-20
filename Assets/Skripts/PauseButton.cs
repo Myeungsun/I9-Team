@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PauseButton : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class PauseButton : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) // P 키, ESC 키를 누를 시 게임 정지
         {
             Ispause = !Ispause;
+
+            
         }
         if (Ispause) // 게임 정지
         {
