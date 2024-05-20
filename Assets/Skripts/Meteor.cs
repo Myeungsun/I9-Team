@@ -12,8 +12,8 @@ public class Meteor : MonoBehaviour
     {
         renderer = GetComponent<SpriteRenderer>();
 
-        float x = Random.Range(-2.5f, 2.5f);
-        float y = Random.Range(3.0f, 5.0f);
+        float x = Random.Range(377.33f, 382.66f);
+        float y = Random.Range(644f, 644.76f);
 
         transform.position = new Vector3(x, y, 0);
     }
