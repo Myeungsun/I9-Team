@@ -14,7 +14,7 @@ public class TopDownMovement : MonoBehaviour
         controller = GetComponent<TopDownController>();
         movementRigidbody = GetComponent<Rigidbody2D>();
         spriteRenderer = transform.Find("MainSprite").GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        animator = transform.Find("MainSprite").GetComponent<Animator>();
     }
 
     private void Start()
@@ -30,6 +30,8 @@ public class TopDownMovement : MonoBehaviour
         if (animator != null)
         {
             bool isMoving = direction.sqrMagnitude > 0;
+            Debug.Log("qwe");
+
             animator.SetBool("isMove", isMoving);
         }
     }
