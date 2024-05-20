@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
@@ -7,7 +9,9 @@ public class TopDownMovement : MonoBehaviour
     private Rigidbody2D movementRigidbody;
     private Vector2 movementDirection = Vector2.zero;
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    private Animator animator;   
+    private float currentSpeed;
+    public float moveSpeed = 200f;
 
     private void Awake()
     {
@@ -15,6 +19,7 @@ public class TopDownMovement : MonoBehaviour
         movementRigidbody = GetComponent<Rigidbody2D>();
         spriteRenderer = transform.Find("MainSprite").GetComponent<SpriteRenderer>();
         animator = transform.Find("MainSprite").GetComponent<Animator>();
+        currentSpeed = moveSpeed;
     }
 
     private void Start()
@@ -43,7 +48,8 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 200;
+        direction = direction * currentSpeed;
+        Debug.Log(currentSpeed);
         movementRigidbody.velocity = direction;
     }
 
@@ -57,5 +63,17 @@ public class TopDownMovement : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
+    }
+
+    public void BoostSpeed(float multiplier, float duration)
+    {
+        StartCoroutine(SpeedBoostCoroutine(multiplier, duration));
+    }
+
+    private IEnumerator SpeedBoostCoroutine(float multiplier, float duration)
+    {
+        currentSpeed = moveSpeed * multiplier; // 속도 증가
+        yield return new WaitForSeconds(duration); // 지정된 시간 동안 대기
+        currentSpeed = moveSpeed; // 원래 속도로 복귀
     }
 }

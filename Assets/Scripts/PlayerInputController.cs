@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class PlayerInputController : TopDownController
 {
     public GameObject[] players;
+    public GameObject gameOver;
 
     private void Start()
     {
         LoadPlayerSelection();
+        gameOver.SetActive(false);
     }
 
     private void LoadPlayerSelection()
@@ -31,6 +33,8 @@ public class PlayerInputController : TopDownController
     {
         if (collision.gameObject.CompareTag("Meteor"))
         {
+            gameOver.SetActive(true);
+            Time.timeScale = 0f;
             // 플레이어가 운석에 맞았을 때의 로직 추가
             Debug.Log("hit!!!!!!");
         }
