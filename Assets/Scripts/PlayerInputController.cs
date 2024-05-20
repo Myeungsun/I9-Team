@@ -27,4 +27,12 @@ public class PlayerInputController : TopDownController
         CallMoveEvent(moveInput);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Meteor"))
+        {
+            // 플레이어가 운석에 맞았을 때의 로직 추가
+            Debug.Log("hit!!!!!!");
+        }
+    }
 }

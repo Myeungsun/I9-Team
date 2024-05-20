@@ -24,13 +24,21 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("MakeMeteor", 0f, 1f);
-        MakeMeteor();
+        InvokeRepeating("MakeMeteor", 1f, 2f);
     }
 
     void MakeMeteor()
     {
-        Instantiate(meteor);
+        if (meteor != null)
+        {
+            float x = Random.Range(0f, 760f); 
+            Vector3 spawnPosition = new Vector3(x, 1300, 0); 
+            Instantiate(meteor, spawnPosition, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Meteor prefab is not assigned in the inspector.");
+        }
     }
 
 public static void Getplayer(int num, bool value)

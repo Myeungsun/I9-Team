@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class Meteor : MonoBehaviour
 {
-    float size = 50f;
+    //float size = 50f;
+    public float speed = 5f;
 
-    SpriteRenderer renderer;
+    //SpriteRenderer renderer;
     // Start is called before the first frame update
-    void Start()
-    {
-        renderer = GetComponent<SpriteRenderer>();
+    //void Start()
+    //{
+    //    renderer = GetComponent<SpriteRenderer>();
 
-        float x = Random.Range(25.0f, 736.0f);
-        float y = Random.Range(1127.0f, 1255.0f);
+    //    float x = Random.Range(25.0f, 736.0f);
+    //    float y = Random.Range(1127.0f, 1255.0f);
 
-        transform.position = new Vector3(x, y, 0);
-    }
+    //    transform.position = new Vector3(x, y, 0);
+    //}
 
     // Update is called once per frame
     void Update()
     {
+        transform.Translate(Vector3.down * speed * Time.deltaTime); 
 
+        if (transform.position.y < 50) 
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
