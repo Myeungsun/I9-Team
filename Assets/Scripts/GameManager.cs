@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject meteor;
     public static bool[] players = new bool[4];
+    public GameObject item;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("MakeMeteor", 1f, 2f);
+        InvokeRepeating("MakeItem", 1f, 2f);
     }
 
     void MakeMeteor()
@@ -67,5 +69,17 @@ public static void Getplayer(int num, bool value)
             players[i] = PlayerPrefs.GetInt("Player" + (i + 1) + "Status", 0) == 1;
         }
     }
-
+    void MakeItem()
+    {
+        if (meteor != null)
+        {
+            float x = Random.Range(0f, 760f);
+            Vector3 spawnPosition = new Vector3(x, 1300, 0);
+            Instantiate(item, spawnPosition, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Item prefab is not assigned in the inspector.");
+        }
+    }
 }

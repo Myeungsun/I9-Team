@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 113432035}
   - component: {fileID: 113432034}
   - component: {fileID: 113432038}
-  - component: {fileID: 113432037}
+  - component: {fileID: 113432039}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -262,18 +262,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &113432037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113432032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &113432038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,6 +279,19 @@ MonoBehaviour:
   - {fileID: 1348051885}
   - {fileID: 1200420148}
   - {fileID: 736984781}
+--- !u!114 &113432039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113432032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1 &145622397
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteor: {fileID: 5433572501168653084, guid: 8f3284dd46d76174fbb8aa53fc807a70, type: 3}
+  item: {fileID: 7296392328096869042, guid: edc24d0aa9cbeac4b96d276260c58a07, type: 3}
 --- !u!1 &520597700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1038,7 @@ GameObject:
   - component: {fileID: 736984785}
   - component: {fileID: 736984784}
   - component: {fileID: 736984783}
-  - component: {fileID: 736984782}
+  - component: {fileID: 736984788}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Player
@@ -1044,18 +1046,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &736984782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736984781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &736984783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1191,6 +1181,19 @@ Transform:
   - {fileID: 145622398}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &736984788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736984781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1 &765511937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,7 +1765,7 @@ GameObject:
   - component: {fileID: 1200420152}
   - component: {fileID: 1200420151}
   - component: {fileID: 1200420150}
-  - component: {fileID: 1200420149}
+  - component: {fileID: 1200420155}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Player
@@ -1770,18 +1773,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1200420149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200420148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1200420150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1917,6 +1908,19 @@ Transform:
   - {fileID: 268614775}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1200420155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200420148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1 &1348051885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1934,7 @@ GameObject:
   - component: {fileID: 1348051889}
   - component: {fileID: 1348051888}
   - component: {fileID: 1348051887}
-  - component: {fileID: 1348051886}
+  - component: {fileID: 1348051892}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -1938,18 +1942,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1348051886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348051885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1348051887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2077,19 @@ Transform:
   - {fileID: 681890103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348051892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348051885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1 &1394785482
 GameObject:
   m_ObjectHideFlags: 0
