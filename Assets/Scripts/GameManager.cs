@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject meteor;
     public static bool[] players = new bool[4];
 
     private void Awake()
@@ -21,7 +22,18 @@ public class GameManager : MonoBehaviour
         LoadPlayerStatus();
     }
 
-    public static void Getplayer(int num, bool value)
+    void Start()
+    {
+        InvokeRepeating("MakeMeteor", 0f, 1f);
+        MakeMeteor();
+    }
+
+    void MakeMeteor()
+    {
+        Instantiate(meteor);
+    }
+
+public static void Getplayer(int num, bool value)
     {
         for (int i = 0; i < players.Length; i++)
         {
