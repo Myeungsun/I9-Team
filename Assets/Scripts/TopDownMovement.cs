@@ -35,7 +35,6 @@ public class TopDownMovement : MonoBehaviour
         if (animator != null)
         {
             bool isMoving = direction.sqrMagnitude > 0;
-            Debug.Log("qwe");
 
             animator.SetBool("isMove", isMoving);
         }
@@ -49,8 +48,9 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
+        
         direction = direction * currentSpeed;
-        Debug.Log(currentSpeed);
+        //Debug.Log(currentSpeed);
         movementRigidbody.velocity = direction;
     }
 
@@ -68,6 +68,7 @@ public class TopDownMovement : MonoBehaviour
 
     public void BoostSpeed(float multiplier, float duration)
     {
+        Debug.Log("BoostSpeed called with multiplier: " + multiplier + " and duration: " + duration);
         StartCoroutine(SpeedBoostCoroutine(multiplier, duration));
     }
 
