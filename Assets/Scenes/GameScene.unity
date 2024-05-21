@@ -249,7 +249,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -10, y: -185}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -260,7 +260,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 60, y: 150}
   m_EdgeRadius: 0
 --- !u!114 &113432038
 MonoBehaviour:
@@ -279,6 +279,7 @@ MonoBehaviour:
   - {fileID: 1348051885}
   - {fileID: 1200420148}
   - {fileID: 736984781}
+  gameOver: {fileID: 0}
 --- !u!114 &113432039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,52 +980,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &704455183
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 704455185}
-  - component: {fileID: 704455184}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &704455184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704455183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9753048367e7a945a4a48172f58bc21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentScoreTxt: {fileID: 1017049532}
-  HighScoreTxt: {fileID: 520597702}
---- !u!4 &704455185
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704455183}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &736984781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1018,7 @@ MonoBehaviour:
   - {fileID: 1348051885}
   - {fileID: 1200420148}
   - {fileID: 736984781}
+  gameOver: {fileID: 0}
 --- !u!114 &736984784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,7 +1108,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -190}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1163,7 +1119,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 150, y: 100}
   m_EdgeRadius: 0
 --- !u!4 &736984787
 Transform:
@@ -1332,6 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05966f6d5fa64bf4c924bf9fc871711c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  messageText: {fileID: 0}
 --- !u!114 &818155236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1790,6 +1747,7 @@ MonoBehaviour:
   - {fileID: 1348051885}
   - {fileID: 1200420148}
   - {fileID: 736984781}
+  gameOver: {fileID: 0}
 --- !u!114 &1200420151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,7 +1837,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1890,7 +1848,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 90, y: 170}
   m_EdgeRadius: 0
 --- !u!4 &1200420154
 Transform:
@@ -1959,6 +1917,7 @@ MonoBehaviour:
   - {fileID: 1348051885}
   - {fileID: 1200420148}
   - {fileID: 736984781}
+  gameOver: {fileID: 0}
 --- !u!114 &1348051888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2048,7 +2007,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -185}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2059,7 +2018,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 80, y: 160}
   m_EdgeRadius: 0
 --- !u!4 &1348051891
 Transform:
@@ -2325,6 +2284,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617810861}
   m_CullTransparentMesh: 1
+--- !u!1 &1773685941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1773685943}
+  - component: {fileID: 1773685942}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1773685942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773685941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9753048367e7a945a4a48172f58bc21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScoreTxt: {fileID: 1017049532}
+  highScoreTxt: {fileID: 520597702}
+--- !u!4 &1773685943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773685941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 302.3565, y: 207.60555, z: -16.826565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1809696224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,7 +2467,6 @@ SceneRoots:
   - {fileID: 328784826}
   - {fileID: 818155239}
   - {fileID: 1150843858}
-  - {fileID: 704455185}
   - {fileID: 1394785486}
   - {fileID: 113432033}
   - {fileID: 1348051891}
@@ -2470,3 +2474,4 @@ SceneRoots:
   - {fileID: 736984787}
   - {fileID: 358109244}
   - {fileID: 1809696227}
+  - {fileID: 1773685943}
