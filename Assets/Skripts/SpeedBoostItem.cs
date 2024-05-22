@@ -34,4 +34,16 @@ public class SpeedBoostItem : MonoBehaviour
             Destroy(gameObject); // 아이템 사용 후 제거
         }
     }
+    private void OnCollisionStay2D(Collision2D collision) //벽 충돌 무시 ㅇㅇ
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+        }
+        if (collision.gameObject.CompareTag("Meteor"))
+        {
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+        }
+    }
+
 }

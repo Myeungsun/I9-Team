@@ -8,6 +8,7 @@ public class PlayerInputController : TopDownController
 {
     public GameObject[] players;
     public GameObject gameOver;
+    public Score scoreScript;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class PlayerInputController : TopDownController
         {
             gameOver.SetActive(true);
             Time.timeScale = 0f;
+            scoreScript.UpdateHighScore();
             // 플레이어가 운석에 맞았을 때의 로직 추가
             Debug.Log("hit!!!!!!");
         }
