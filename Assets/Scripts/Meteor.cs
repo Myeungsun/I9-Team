@@ -42,4 +42,24 @@ public class Meteor : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    // 난이도에 따른 메테오 설정
+    public void Initialize(GameManager.Difficulty difficulty)
+    {
+        switch (difficulty)
+        {
+            case GameManager.Difficulty.Easy:
+                speed = 3f; // 쉬움 난이도의 속도 설정
+                transform.localScale = new Vector3(30f, 30f, 30f); // 쉬움 난이도의 크기 설정
+                break;
+            case GameManager.Difficulty.Normal:
+                speed = 5f; // 보통 난이도의 속도 설정
+                transform.localScale = new Vector3(50f, 50f, 50f); // 보통 난이도의 크기 설정
+                break;
+            case GameManager.Difficulty.Hard:
+                speed = 10f; // 어려움 난이도의 속도 설정
+                transform.localScale = new Vector3(80f, 80f, 80f); // 어려움 난이도의 크기 설정
+                break;
+        }
+    }
 }

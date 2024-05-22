@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1 &145622397
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteor: {fileID: 5433572501168653084, guid: 8f3284dd46d76174fbb8aa53fc807a70, type: 3}
+  item: {fileID: 0}
+  currentDifficulty: 1
 --- !u!1 &520597700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1 &765511937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1 &1348051885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6a1a476abae3948b523fb1fc96cd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1 &1394785482
 GameObject:
   m_ObjectHideFlags: 0

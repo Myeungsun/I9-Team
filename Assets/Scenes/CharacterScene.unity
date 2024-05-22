@@ -2134,6 +2134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteor: {fileID: 5433572501168653084, guid: 8f3284dd46d76174fbb8aa53fc807a70, type: 3}
+  item: {fileID: 0}
+  currentDifficulty: 1
 --- !u!4 &1565018363
 Transform:
   m_ObjectHideFlags: 0
