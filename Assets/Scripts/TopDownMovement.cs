@@ -74,7 +74,7 @@ public class TopDownMovement : MonoBehaviour
 
     private IEnumerator SpeedBoostCoroutine(float multiplier, float duration)
     {
-        currentSpeed = moveSpeed * multiplier; // 속도 증가
+        currentSpeed =  multiplier; // 속도 증가
         yield return new WaitForSeconds(duration); // 지정된 시간 동안 대기
         currentSpeed = moveSpeed; // 원래 속도로 복귀
     }
