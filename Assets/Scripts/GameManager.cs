@@ -71,7 +71,7 @@ public static void Getplayer(int num, bool value)
     }
     void MakeItem()
     {
-        if (meteor != null)
+        if (item != null)
         {
             float x = Random.Range(0f, 760f);
             Vector3 spawnPosition = new Vector3(x, 1300, 0);
