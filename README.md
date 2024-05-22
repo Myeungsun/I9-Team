@@ -17,7 +17,7 @@
 </div>
 <div align="center"> 
   
-**프로젝트 이름 :** 운석피하기
+**프로젝트 이름 :** ☄ 운석피하기
   </div>
 <div align="center"> 
   
@@ -33,11 +33,11 @@
   </div>
 <div align="center"> 
   
-#  게임 플레이 방식 
+#  게임 플레이 방식 🎮 
 
 <div align="center"> 
   
-### 💻 좌, 우 방향키
+### 좌, 우 방향키 ▶◀
 
 #
 
