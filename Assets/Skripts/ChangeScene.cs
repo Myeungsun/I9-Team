@@ -1,13 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
-
     public Text messageText;
+    public DifficultyManager difficultyManager;
+
+    private void Awake()
+    {
+        difficultyManager = FindObjectOfType<DifficultyManager>();
+
+    }
 
     public void MainScene() // 메인 창
     {
@@ -73,20 +78,27 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("ScoreBoard");
     }
 
-    public void SetDifficultyAndStartGame(string difficulty) //게임 난이도
+    public void SetDifficultyAndStartGame(string difficulty) //게임 난이도 설정 후 게임 시작
     {
+        if (difficultyManager == null)
+        {
+            Debug.LogError("DifficultyManager를 찾을 수 없습니다. 난이도를 설정할 수 없습니다.");
+            return;
+        }
+
         switch (difficulty)
         {
             case "Easy":
-                GameManager.instance.SetDifficultyEasy();
+                difficultyManager.SetDifficultyEasy();
                 break;
             case "Normal":
-                GameManager.instance.SetDifficultyNormal();
+                difficultyManager.SetDifficultyNormal();
                 break;
             case "Hard":
-                GameManager.instance.SetDifficultyHard();
+                difficultyManager.SetDifficultyHard();
                 break;
         }
+
         GameScene(); // 게임 씬으로 이동
     }
 }

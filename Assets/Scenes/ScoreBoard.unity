@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 0}
+  difficultyManager: {fileID: 0}
 --- !u!114 &668513617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,6 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 0}
+  difficultyManager: {fileID: 0}
 --- !u!114 &1615671607
 MonoBehaviour:
   m_ObjectHideFlags: 0
