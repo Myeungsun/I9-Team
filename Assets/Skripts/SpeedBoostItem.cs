@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpeedBoostItem : MonoBehaviour
 {
-    public float speedMultiplier = 1.5f; // 속도 증가 배율
+    public float speedMultiplier = 0.5f; // 속도 증가 배율
     public float duration = 5f; // 속도 증가 지속 시간
     public float speed = 20f;
     void Update()

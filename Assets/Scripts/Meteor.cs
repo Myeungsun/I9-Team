@@ -4,22 +4,8 @@ using UnityEngine;
 
 public class Meteor : MonoBehaviour
 {
-    //float size = 50f;
     public float speed = 5f;
 
-    //SpriteRenderer renderer;
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    renderer = GetComponent<SpriteRenderer>();
-
-    //    float x = Random.Range(25.0f, 736.0f);
-    //    float y = Random.Range(1127.0f, 1255.0f);
-
-    //    transform.position = new Vector3(x, y, 0);
-    //}
-
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime); 
@@ -40,6 +26,15 @@ public class Meteor : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
+        }
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
         }
     }
 
