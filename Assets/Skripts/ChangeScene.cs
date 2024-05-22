@@ -72,4 +72,20 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("ScoreBoard");
     }
 
+    public void SetDifficultyAndStartGame(string difficulty) //게임 난이도
+    {
+        switch (difficulty)
+        {
+            case "Easy":
+                GameManager.instance.SetDifficultyEasy();
+                break;
+            case "Normal":
+                GameManager.instance.SetDifficultyNormal();
+                break;
+            case "Hard":
+                GameManager.instance.SetDifficultyHard();
+                break;
+        }
+        GameScene(); // 게임 씬으로 이동
+    }
 }
