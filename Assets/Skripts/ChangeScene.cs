@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
+
+    public Text messageText;
+
     public void MainScene() // 메인 창
     {
         SceneManager.LoadScene("MainScene");
@@ -22,7 +26,45 @@ public class ChangeScene : MonoBehaviour
 
     public void GameScene() // 게임 시작 창
     {
-        SceneManager.LoadScene("GameScene");
+        if (IsAnyPlayerSelected())
+        {
+            SceneManager.LoadScene("GameScene");
+        }
+        else
+        {
+            ShowMessage("캐릭터를 선택해 주세요.");
+        }
+    }
+
+    private bool IsAnyPlayerSelected()
+    {
+        foreach (bool player in GameManager.players)
+        {
+            if (player)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void ShowMessage(string message)
+    {
+        if (messageText != null)
+        {
+            messageText.text = message;
+            messageText.gameObject.SetActive(true);
+            StartCoroutine(HideMessageAfterDelay(2f)); // 2초 후에 메시지 숨김
+        }
+    }
+
+    private IEnumerator HideMessageAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (messageText != null)
+        {
+            messageText.gameObject.SetActive(false);
+        }
     }
 
     public void ScoreBoard() // 점수 창
