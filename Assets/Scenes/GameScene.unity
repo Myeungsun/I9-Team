@@ -457,6 +457,7 @@ MonoBehaviour:
   - {fileID: 1200420148}
   - {fileID: 736984781}
   gameOver: {fileID: 889294414}
+  scoreScript: {fileID: 1773685942}
 --- !u!114 &113432039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,6 +1371,7 @@ MonoBehaviour:
   - {fileID: 1200420148}
   - {fileID: 736984781}
   gameOver: {fileID: 889294414}
+  scoreScript: {fileID: 1773685942}
 --- !u!114 &736984784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,6 +2252,7 @@ MonoBehaviour:
   - {fileID: 1200420148}
   - {fileID: 736984781}
   gameOver: {fileID: 889294414}
+  scoreScript: {fileID: 1773685942}
 --- !u!114 &1200420151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2420,6 +2423,7 @@ MonoBehaviour:
   - {fileID: 1200420148}
   - {fileID: 736984781}
   gameOver: {fileID: 889294414}
+  scoreScript: {fileID: 1773685942}
 --- !u!114 &1348051888
 MonoBehaviour:
   m_ObjectHideFlags: 0

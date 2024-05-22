@@ -10,16 +10,19 @@ public class Score : MonoBehaviour
     [SerializeField] private TextMeshProUGUI highScoreTxt;
 
     private float timeCounter = 0f;
-    private int highScore = 0;
     private int currentScore = 0;
+
+    // 선택한 난이도
+    private FallingObjectManager.Difficulty currentDifficulty;
 
     void Start()
     {
-        // 게임 시작 시 최고 점수를 불러옴
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
-        highScoreTxt.text = $"Best Score: {highScore}";
+        // 현재 선택한 난이도 가져오기
+        currentDifficulty = (FallingObjectManager.Difficulty)PlayerPrefs.GetInt("GameDifficulty", (int)FallingObjectManager.Difficulty.Normal);
 
-        //Debug.Log(gameObject);
+        // 해당 난이도에 저장된 최고 점수 불러오기
+        int highScore = PlayerPrefs.GetInt(currentDifficulty.ToString() + "HighScore", 0);
+        highScoreTxt.text = $"Best Score: {highScore}";
     }
 
     void Update()
@@ -32,16 +35,19 @@ public class Score : MonoBehaviour
             timeCounter = 0f;
         }
 
-        // 현재 점수가 최고 점수를 넘으면 최고 점수를 업데이트
-        if (currentScore > highScore)
-        {
-            highScore = currentScore;
-            PlayerPrefs.SetInt("HighScore", highScore); // 최고 점수를 저장
-            PlayerPrefs.Save(); // 변경 사항을 즉시 저장
-        }
-
         // UI 텍스트 업데이트
         currentScoreTxt.text = $"Current Score: {currentScore}";
-        highScoreTxt.text = $"Best Score: {highScore}";
+    }
+
+    // 게임 종료 시 최고 점수 업데이트
+    public void UpdateHighScore()
+    {
+        // 현재 점수와 저장된 최고 점수 비교하여 업데이트
+        int savedHighScore = PlayerPrefs.GetInt(currentDifficulty.ToString() + "HighScore", 0);
+        if (currentScore > savedHighScore)
+        {
+            PlayerPrefs.SetInt(currentDifficulty.ToString() + "HighScore", currentScore);
+            PlayerPrefs.Save();
+        }
     }
 }
