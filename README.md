@@ -44,6 +44,8 @@
 #  구현내용 
 #### 시작화면
 
+<img width="380" alt="통합" src="https://github.com/Myeungsun/I9-Team/assets/167074990/dc2e66ad-a4c2-4205-8d7d-2cc3d7a3ccd2">
+
 #### 캐릭터 선택화면
 
 #### 난이도 선택화면
