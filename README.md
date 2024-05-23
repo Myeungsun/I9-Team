@@ -48,8 +48,13 @@
 
 #### 캐릭터 선택화면
 
+![캐릭터선택창](https://github.com/Myeungsun/I9-Team/assets/167074990/f4f77795-0f55-44b8-b435-79f1c7717372)
 #### 난이도 선택화면
+![난이도선택창](https://github.com/Myeungsun/I9-Team/assets/167074990/ade73aad-e8c7-4d0d-875b-7045d7f7a9b5)
+#### 게임화면
+#### 이지모드       /         노말모드         /       하드모드
+![이지](https://github.com/Myeungsun/I9-Team/assets/167074990/680a9a7d-52c0-4c31-adeb-d03dd405251f) ![노말](https://github.com/Myeungsun/I9-Team/assets/167074990/0e70914b-7417-482a-afd3-c04b9d3a4bf1) ![하드](https://github.com/Myeungsun/I9-Team/assets/167074990/18195558-8aac-4785-a657-692e4888ab1c)
 
-#### 인게임
-
+  
 #### 스코어보드
+![스코어보드](https://github.com/Myeungsun/I9-Team/assets/167074990/2213b33b-ffd1-43ca-952f-3662c51bae58)
